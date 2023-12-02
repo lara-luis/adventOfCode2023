@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class Day1 {
 	/*Part 1*/
-	public int ProcessLine_1(String line) {
+	public int processLine_1(String line) {
 		char[] chars = line.toCharArray();
 		int firstDigit = -1;
 		int lastDigit = -1;
@@ -49,7 +49,7 @@ public class Day1 {
 	
 	Integer[] nums = new Integer[] {0,1,2,3,4,5,6,7,8,9};
 	
-	private int GetFirstInt(String line) {
+	private int getFirstInt(String line) {
 		int earlierIndex = Integer.MAX_VALUE;
 		int earlierNumber = -1;
 		
@@ -71,7 +71,7 @@ public class Day1 {
 		return earlierNumber;
 	}
 	
-	private int GetLastInt(String line) {
+	private int getLastInt(String line) {
 		int laterIndex = -1;
 		int laterNumber = -1;
 		
@@ -93,9 +93,9 @@ public class Day1 {
 		return laterNumber;
 	}
 	
-	public int ProcessLine_2(String line) {
-		int firstDigit = GetFirstInt(line);
-		int lastDigit = GetLastInt(line);
+	public int processLine_2(String line) {
+		int firstDigit = getFirstInt(line);
+		int lastDigit = getLastInt(line);
 				
 		if (firstDigit == -1) {
 			return 0;
@@ -116,7 +116,7 @@ public class Day1 {
         int sum = 0;
         try {
 			while ((line = bufferedReader.readLine()) != null) {
-				sum += day1.ProcessLine_2(line);
+				sum += day1.processLine_2(line);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
