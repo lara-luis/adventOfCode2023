@@ -21,10 +21,7 @@ public class Day3 {
 	static Boolean[][] checkedPosMatrix = new Boolean[NUM_ROWS][NUM_COLS];	
 
 	private boolean isSymbol(String s) {
-		for(String symbol : symbols) {
-			if (symbol.equals(s)) return true;
-		}
-		return false;
+		return symbols.contains(s);
 	}
 
 	private int getFullNumber(int row, int col) {
